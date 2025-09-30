@@ -4,7 +4,7 @@ import {
   Rocket, 
   Play, 
   Target, 
-  ChartLine, 
+  TrendingUp, 
   Zap, 
   Check, 
   Star,
@@ -245,7 +245,7 @@ function App() {
                 <div className="bg-gradient-to-r from-orange-900/30 to-yellow-900/30 rounded-lg p-4 mb-4 border border-brand-orange/20">
                   <div className="flex items-center space-x-2 mb-2">
                     <div className="w-8 h-8 bg-brand-orange rounded-lg flex items-center justify-center glow-effect">
-                      <ChartLine className="w-4 h-4 text-white" />
+                      <TrendingUp className="w-4 h-4 text-white" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-white">Market Insights</h4>
@@ -410,7 +410,7 @@ function App() {
             {/* Feature 3: AI Content Engine */}
             <div className="feature-card rounded-2xl p-8">
               <div className="w-16 h-16 bg-brand-orange rounded-xl flex items-center justify-center mb-6 glow-effect">
-                <ChartLine className="w-8 h-8 text-white" />
+                <TrendingUp className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">AI Content & Newsletter Engine</h3>
               <p className="text-dark-muted mb-6">
