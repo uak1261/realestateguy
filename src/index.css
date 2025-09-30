@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS for additional styling */
+@layer base {
+  body {
+    @apply bg-dark-bg text-dark-text font-inter;
+  }
+}
+
+@layer components {
+  /* Glass effect utility */
+  .glass-effect {
+    backdrop-filter: blur(20px);
+    background: rgba(26, 26, 46, 0.8);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+  }
+  
+  /* Glow effects */
+  .glow-effect {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+  
+  .card-glow {
+    box-shadow: 
+      0 4px 20px rgba(0, 0, 0, 0.3),
+      0 0 40px rgba(59, 130, 246, 0.1);
+  }
+  
+  /* Gradient backgrounds */
+  .gradient-bg {
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  }
+  
+  .hero-gradient {
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #f59e0b 100%);
+  }
+  
+  .hero-bg {
+    background-image: 
+      radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
+  }
+  
+  /* Card styles */
+  .feature-card {
+    @apply transition-all duration-300 bg-gradient-to-br from-dark-card to-dark-surface border border-dark-border;
+  }
+  
+  .feature-card:hover {
+    @apply -translate-y-2 border-brand-blue;
+    box-shadow: 0 25px 50px rgba(59, 130, 246, 0.15);
+  }
+  
+  .problem-card {
+    @apply bg-gradient-to-br from-dark-card to-dark-surface border border-dark-border transition-all duration-300;
+  }
+  
+  .problem-card:hover {
+    @apply border-red-400;
+    box-shadow: 0 10px 30px rgba(239, 68, 68, 0.1);
+  }
+  
+  .testimonial-card {
+    @apply bg-gradient-to-br from-dark-card to-dark-surface border border-dark-border;
+  }
+  
+  .pricing-card {
+    @apply bg-gradient-to-br from-dark-card to-dark-surface border border-dark-border transition-all duration-300;
+  }
+  
+  .pricing-card:hover {
+    @apply -translate-y-1 border-brand-blue;
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1);
+  }
+  
+  .pricing-card.featured {
+    @apply border-brand-blue;
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.2);
+  }
+  
+  /* Navigation */
+  .nav-blur {
+    backdrop-filter: blur(20px);
+    background: rgba(15, 15, 35, 0.9);
+    border-bottom: 1px solid #2a2a3e;
+  }
+  
+  /* Form styles */
+  .form-dark {
+    @apply bg-gradient-to-br from-dark-card to-dark-surface border border-dark-border;
+  }
+  
+  .input-dark {
+    @apply bg-dark-card/80 border border-dark-border text-dark-text;
+  }
+  
+  .input-dark:focus {
+    @apply border-brand-blue ring-2 ring-brand-blue/20;
+  }
+  
+  .input-dark::placeholder {
+    @apply text-slate-500;
+  }
+  
+  /* Statistics gradient */
+  .stat-number {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
